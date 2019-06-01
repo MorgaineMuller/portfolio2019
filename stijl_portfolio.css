@@ -1,0 +1,327 @@
+
+.menu>a{
+		color: black;
+		font-size: 2rem;
+		/*text-align: center; */
+		text-decoration: none;
+		animation-name: kleinmenuweergevenText;
+		animation-duration: 3s;
+}
+
+@keyframes kleinmenuweergevenText {
+    from{
+				font-size: 0;
+				opacity: 0;
+		}
+}
+
+body>.menu {
+      background-color: white;
+      width: 8rem;
+      height: 8rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+			padding-top: 3rem;
+			padding-left: 1rem;
+			border-radius: 4rem;
+		/*	border: 0.5pt dotted black; */
+			box-shadow: 10px 11px 51px -8px rgba(0,0,0,0.75);
+			z-index: 1;
+			animation-name: kleinmenuweergeven;
+			animation-duration: 2s;
+}
+
+@keyframes kleinmenuweergeven {
+    from{
+				width: 0rem;
+				height: 0rem;
+				left: 80vw;
+		}
+}
+
+body {
+      height: 450vh;
+      background-image: linear-gradient(180deg, white 50%, silver, darkgrey);
+}
+
+/* main gedeelte */
+
+
+p{
+		font-size: 2rem;
+	  font-family: 'Montserrat';
+		padding-left: 2rem;
+		padding-right: 2rem;
+		width: 90vw;
+		text-align: right;
+}
+
+h2{
+		font-family: 'Antic Didone', serif;
+		font-size: 3rem;
+		text-align: center;
+		margin-bottom: 3rem;
+}
+
+
+
+h1{
+		font-size: 10rem;
+		font-weight: 900;
+		width: 90vw;
+		line-height: 3.5rem;
+		color: #494949;
+		text-align: right;
+		margin-top: 10rem;
+}
+
+h1>span{
+			color: lightgrey;
+			mix-blend-mode: multiply;
+			 display: block;
+ 			font-size: 5rem;
+ 			text-align: right;
+}
+
+.play{
+		animation-play-state: running;
+}
+
+.onzichtbaar{
+		display: none;
+}
+
+.grootMenu{
+		position: fixed;
+		top: 10vh;
+		left: 10vw;
+		width: 80vw;
+		height: 80vw;
+		border-radius: 40vw;
+		background-color: white;
+		z-index: 100;
+  	box-shadow: 0px 0px 0px 300px rgba(0,0,0,0.75);
+		padding-top: 15vw;
+		animation-name: menuweergeven;
+		animation-duration: 2s;
+}
+
+@keyframes menuweergeven {
+	   from {
+			 top: 50vh;
+			 left: 50vw;
+	     opacity: 0;
+	     height: 0vh;
+			 width: 0vw;
+			 box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+	   }
+
+	   50% {
+	     opacity: 1;
+	   }
+}
+
+.logo{
+		width: 5rem;
+		filter: invert(100%);
+}
+
+.grootMenu>a{
+		display: block;
+		font-size: 2.5rem;
+		line-height: 5rem;
+		color: black;
+		text-align: center;
+		text-decoration: none;
+		transition: font-size 0.5s;
+		animation-name: groeienFont;
+		animation-duration: 1s;
+}
+
+@keyframes groeienFont {
+			from{
+					font-size: 0rem;
+			}
+}
+
+.grootMenu>a:hover{
+			font-size: 3rem;
+}
+
+.kruis{
+		width: 2rem;
+		margin-top: 2rem;
+		transition: width 0.5s;
+}
+
+.kruis:hover{
+		width: 2.5rem;
+}
+
+main>div{
+		margin-top: 10rem;
+		height: 40vh;
+		background-position: center;
+		background-attachment:fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+}
+.eerste{
+			background-image: url(B&W/03_01.jpg);
+}
+
+.tweede{
+			background-image: url(B&W/03.jpg);
+			background-size: cover;
+}
+
+.derde{
+			background-image: url(B&W/05.jpg);
+}
+
+.vierde{
+			background-size: 100%;
+			background-attachment: local;
+			background-image: url(B&W/10.jpg);
+}
+
+.vijfde{
+			background-image: url(B&W/DSC01443.jpg);
+}
+
+.zesde{
+			background-image: url(B&W/DSC01269_01.jpg);
+			background-size: cover;
+}
+
+
+.zevende{
+			background-size: 100%;
+			background-attachment: local;
+			background-image: url(B&W/film.jpg);
+}
+
+.achtste{
+		background-image: url(B&W/oude_man.jpg);
+	  background-size: cover;
+}
+
+p {
+		background-color: rgba(100%, 100%, 100%, 1);
+		mix-blend-mode: saturation;
+		position:absolute;
+		 bottom: 0;
+		 left: 0;
+		 right: 0;
+		 overflow: hidden;
+		 width: 100%;
+		 height: 100%;
+		 transition: .5s ease;
+
+}
+
+.tweede>p{
+	mix-blend-mode: difference;
+}
+
+.vierde>p{
+	mix-blend-mode: difference;
+}
+
+.achtste>p{
+	mix-blend-mode: difference;
+}
+div:hover p{
+	 height: 0%
+}
+@supports (grid-area: auto) {
+
+		@media (min-width: 1000px) {
+			body {
+			      height: 95vh;
+			      background-image: linear-gradient(90deg, #2d2d2d, black, #2d2d2d);
+			}
+			main{
+					width: 900vw;
+					height: 95vh;
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+					overflow: hidden;
+			}
+			main>div{
+					height: 80vh;
+					width: 80vw;
+					background-color: black;
+					margin: 10vh auto;
+			}
+
+			h1{
+					font-size: 30rem;
+					font-weight: 900;
+					width: 80vw;
+					line-height: 5rem;
+					color: #494949;
+					text-align: left;
+					margin: 40vh auto;
+					animation-name: vanboven;
+					animation-duration: 2s;
+			}
+
+		@keyframes vanboven {
+				 from{
+					margin: 0vh auto;
+					}
+		}
+
+				h1>span{
+							color: lightgrey;
+							mix-blend-mode: difference;
+							font-size: 18rem;
+							text-align: center;
+							animation-name: vanbeneden;
+							animation-duration: 2s;
+				}
+				@keyframes vanbeneden {
+						 from{
+							margin: 90vh auto;
+							}
+				}
+
+				.menu>a{
+					font-size: 3rem;
+			  }
+
+				body>.menu {
+				      width: 15rem;
+				      height: 15rem;
+				      position: absolute;
+				      top: auto;
+							bottom: 0rem;
+				      left: 0;
+							padding-top: 6rem;
+							padding-left: 3rem;
+							border-radius: 7.5rem;
+						/*	border: 0.5pt dotted black; */
+							box-shadow: 10px 11px 51px -8px rgba(0,0,0,0.75);
+							z-index: 1;
+							animation-name: kleinmenuweergeven;
+							animation-duration: 2s;
+				}
+
+				.achtste{
+					  background-size: 33%;
+				}
+				.zesde{
+					  background-size: 33%;
+				}
+				.tweede{
+					  background-size: 33%;
+				}
+				.vierde{
+						background-attachment: fixed;
+						background-size: cover;
+				}
+		}
+}

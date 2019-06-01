@@ -1,0 +1,181 @@
+
+.menu>a{
+		color: black;
+		font-size: 2rem;
+		/*text-align: center; */
+		text-decoration: none;
+		animation-name: kleinmenuweergevenText;
+		animation-duration: 3s;
+}
+
+@keyframes kleinmenuweergevenText {
+    from{
+				font-size: 0;
+				opacity: 0;
+		}
+}
+
+main>.menu {
+      background-color: white;
+      width: 8rem;
+      height: 8rem;
+			margin: 2rem auto;
+			padding-top: 3rem;
+			padding-left: 1rem;
+			border-radius: 4rem;
+		/*	border: 0.5pt dotted black; */
+			box-shadow: 10px 11px 51px -8px rgba(0,0,0,0.75);
+			z-index: 1;
+			animation-name: kleinmenuweergeven;
+			animation-duration: 2s;
+}
+
+@keyframes kleinmenuweergeven {
+    from{
+				width: 0rem;
+				height: 0rem;
+				left: 80vw;
+		}
+}
+
+body {
+      background-image: linear-gradient(90deg, white, silver, white) ;
+}
+
+/* main gedeelte */
+
+
+p{
+		font-size: 2rem;
+	  font-family: 'Montserrat';
+		padding-left: 2rem;
+		padding-right: 2rem;
+		width: 90vw;
+		text-align: right;
+}
+
+h2{
+		font-family: 'Antic Didone', serif;
+		font-size: 3rem;
+		text-align: center;
+		margin-bottom: 3rem;
+}
+
+
+
+h1{
+		font-size: 8rem;
+		font-weight: 900;
+		width: 100vw;
+		line-height: 3.5rem;
+		color: white;
+		text-align: center;
+		margin-top: 5rem;
+
+}
+
+h1>span{
+			color: darkgrey;
+			mix-blend-mode: difference;
+			 display: block;
+ 			font-size: 10rem;
+ 			text-align: center;
+}
+
+.play{
+		animation-play-state: running;
+}
+
+.onzichtbaar{
+		display: none;
+}
+
+.grootMenu{
+		position: fixed;
+		top: 10vh;
+		left: 10vw;
+		width: 80vw;
+		height: 80vw;
+		border-radius: 40vw;
+		background-color: white;
+		z-index: 100;
+  	box-shadow: 0px 0px 0px 300px rgba(0,0,0,0.75);
+		padding-top: 15vw;
+		animation-name: menuweergeven;
+		animation-duration: 2s;
+}
+
+@keyframes menuweergeven {
+	   from {
+			 top: 50vh;
+			 left: 50vw;
+	     opacity: 0;
+	     height: 0vh;
+			 width: 0vw;
+			 box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+	   }
+
+	   50% {
+	     opacity: 1;
+	   }
+ }
+
+.logo{
+		width: 5rem;
+		filter: invert(100%);
+}
+
+.grootMenu>a{
+		display: block;
+		font-size: 2.5rem;
+		line-height: 5rem;
+		color: black;
+		text-align: center;
+		text-decoration: none;
+		transition: font-size 0.5s;
+		animation-name: groeienFont;
+		animation-duration: 1s;
+}
+
+@keyframes groeienFont {
+			from{
+					font-size: 0rem;
+			}
+}
+
+.grootMenu>a:hover{
+			font-size: 3rem;
+}
+
+.kruis{
+		width: 2rem;
+		margin-top: 2rem;
+		transition: width 0.5s;
+}
+
+.kruis:hover{
+		width: 2.5rem;
+}
+
+iframe {
+			margin-top: -220px;
+			margin-left: -30px;
+			filter: grayscale(100%);
+}
+
+.kader {
+			margin: 10rem auto;
+			overflow: hidden;
+			width: 480px;
+			height: 320px;
+}
+
+@supports (grid-area: auto) {
+
+		@media (min-width: 1000px) {
+	
+
+
+
+		}
+}

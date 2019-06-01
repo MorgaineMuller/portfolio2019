@@ -1,0 +1,520 @@
+
+.menu>a{
+		color: black;
+		font-size: 2rem;
+		/*text-align: center; */
+		text-decoration: none;
+		animation-name: kleinmenuweergevenText;
+		animation-duration: 3s;
+}
+
+@keyframes kleinmenuweergevenText {
+    from{
+				font-size: 0;
+				opacity: 0;
+		}
+}
+
+body>.menu {
+      background-color: white;
+      width: 8rem;
+      height: 8rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+			padding-top: 3rem;
+			padding-left: 1rem;
+			border-radius: 4rem;
+		/*	border: 0.5pt dotted black; */
+			box-shadow: 10px 11px 51px -8px rgba(0,0,0,0.75);
+			z-index: 1;
+			animation-name: kleinmenuweergeven;
+			animation-duration: 2s;
+}
+
+@keyframes kleinmenuweergeven {
+    from{
+				width: 0rem;
+				height: 0rem;
+				left: 80vw;
+		}
+}
+
+body {
+    /*  height: 400vh; */
+      background-image: linear-gradient(180deg, white 50%, silver, darkgrey);
+}
+
+/* main gedeelte */
+
+
+h1 {
+      font-size: 9rem;
+      font-weight: 900;
+      width: 36rem;
+      margin: 5rem auto;
+      line-height: 3.5rem;
+      color: darkgrey;
+			text-align: right;
+}
+
+span {
+      display: block;
+      mix-blend-mode: difference;
+      color: lightgrey;
+}
+
+.foto{
+		height: 50vh;
+		width: 70vw;
+		background-size: 120%;
+		background-position: center;
+		background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+		margin-top: 10rem;
+		margin-bottom: 2rem;
+
+}
+
+.deel01>.foto{
+
+		background-image: url(inleiding/cover_magazine.jpg);
+}
+
+.deel02>.foto{
+		width: 60vw;
+		margin-left: 37vw;
+		background-image: url(inleiding/VOORBLAD_symbool_02_groot.png);
+}
+
+
+.deel03>.foto{
+		height: 60vh;
+		width: 97vw;
+		background-position: center bottom;
+		background-image: url(inleiding/01.jpg);
+}
+
+p{
+		font-size: 2rem;
+	  font-family: 'Montserrat';
+		padding-left: 2rem;
+		padding-right: 2rem;
+		width: 90vw;
+		text-align: right;
+}
+
+h2{
+		font-family: 'Antic Didone', serif;
+		font-size: 3rem;
+		text-align: center;
+		margin-bottom: 3rem;
+}
+
+.deel01>p{
+		padding-left: 6rem;
+		padding-right: 0rem;
+		text-align: left;
+}
+
+
+video{
+		width: 98vw;
+		margin-top: 8rem;
+}
+
+h3{
+		font-size: 10rem;
+		font-weight: 900;
+		width: 36rem;
+		line-height: 3.5rem;
+		color: #494949;
+		text-align: right;
+		margin-top: 8rem;
+		margin-left: 1.5rem;
+}
+
+h3>span{
+			color: white;
+			mix-blend-mode: exclusion;
+}
+
+	.lijn_01{
+		background-color: black;
+		position: absolute;
+		top: 60rem;
+		left: 3rem;
+		height: 82rem;
+		width: 0.5rem;
+		z-index: -5;
+		animation-name: groeienLijnEen;
+		animation-duration: 20s;
+	  animation-play-state: paused;
+}
+
+		@keyframes groeienLijnEen {
+       from{
+		      height: 0rem;
+			 }
+		}
+
+			.lijn_02{
+				background-color: black;
+				position: absolute;
+				top: 138rem;
+				right: 3rem;
+				height: 120rem;
+				width: 0.5rem;
+				z-index: -5;
+				overflow: hidden;
+				animation-name: groeienLijnTwee;
+				animation-duration: 40s;
+				animation-play-state: paused;
+		}
+		@keyframes groeienLijnTwee {
+				from{
+							height: 0;
+				}
+		}
+
+.play{
+		animation-play-state: running;
+}
+
+.arrow {
+		width: 5rem;
+		position: absolute;
+		top: 0rem;
+		right: 0rem;
+		animation-name: springen;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+}
+
+.next{
+		position: absolute;
+		top: 288rem;
+		right: 2rem;
+		width: 20rem;
+		font-size: 2rem;
+		padding-top: 1.5rem;
+		color: black;
+		text-decoration: none;
+}
+.next:hover{
+		color: white
+}
+	@keyframes springen {
+			50%{
+						right: 2.3rem;
+			}
+	}
+
+.onzichtbaar{
+		display: none;
+}
+
+ /* menu grootmaken */
+.grootMenu{
+		position: fixed;
+		top: 10vh;
+		left: 10vw;
+		width: 80vw;
+		height: 80vw;
+		border-radius: 40vw;
+		background-color: white;
+		z-index: 100;
+  	box-shadow: 0px 0px 0px 350px rgba(0,0,0,0.75);
+		padding-top: 15vw;
+		animation-name: menuweergeven;
+		animation-duration: 2s;
+}
+
+@keyframes menuweergeven {
+	   from {
+			 top: 50vh;
+			 left: 50vw;
+	     opacity: 0;
+	     height: 0vh;
+			 width: 0vw;
+			 box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+	   }
+
+	   50% {
+	     opacity: 1;
+	   }
+}
+
+.logo{
+		width: 5rem;
+		filter: invert(100%);
+}
+
+.grootMenu>a{
+		display: block;
+		font-size: 2.5rem;
+		line-height: 5rem;
+		color: black;
+		text-align: center;
+		text-decoration: none;
+		transition: font-size 0.5s;
+		animation-name: groeienFont;
+		animation-duration: 1s;
+}
+
+@keyframes groeienFont {
+			from{
+					font-size: 0rem;
+			}
+}
+
+.grootMenu>a:hover{
+			font-size: 3rem;
+}
+
+.kruis{
+		width: 2rem;
+		margin-top: 2rem;
+		transition: width 0.5s;
+}
+
+.kruis:hover{
+		width: 2.5rem;
+}
+
+.lijn_03, .lijn_04, .lijn_05, .lijn_06, .lijn_07, .lijn_08 {
+		display: none;
+}
+
+	.deelvideo{
+			margin-bottom: 18rem;
+		}
+
+@supports (grid-area: auto) {
+
+
+	@media (min-width: 1000px) {
+			.deelvideo{
+			margin-bottom: 0rem;
+			}
+			body>.menu {
+						width: 15rem;
+						height: 15rem;
+						border-radius: 7.5rem;
+						padding-top: 6rem;
+						box-shadow: 10px 11px 51px -8px rgba(0,0,0,0.75);
+			}
+
+			.menu>a{
+			  font-size: 3rem;
+				padding-top: 7rem;
+				text-align: center;
+				padding-left: 2.5rem;
+			}
+
+			main{
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
+					grid-auto-rows: 1fr 1fr 1fr;
+
+			}
+			.deel01, .deel02, .deel03,{
+			 width: 33vw;
+			}
+		 .deel01>p, .deel02>p, .deel03>p{
+				text-align: center;
+				font-size: 1.7vw;
+				padding: 1.5em;
+				width: 33vw;
+			}
+
+		.deel01{
+				grid-column: 1;
+				grid-row: 2;
+			}
+
+		.deel02{
+				grid-column: 2;
+				grid-row: 2;
+			}
+
+		.deel03{
+				grid-column: 3;
+				grid-row: 2;
+			}
+
+     	h1{
+ 					font-size: 20vw;
+ 					font-weight: 900;
+ 					width: 85vw;
+ 					line-height: 10rem;
+ 					color: #494949;
+ 					text-align: right;
+ 					margin: 20vh auto;
+ 					animation-name: vanboven;
+ 					animation-duration: 2s;
+					grid-column: 1/4;
+					grid-row: 1;
+					mix-blend-mode: screen;
+					padding-right: 10rem;
+ 			}
+
+			.foto{
+			background-size: cover;
+			background-position: center;
+			margin-top: 0;
+				}
+			.deel01>.foto{
+					width: 30vw;
+					background-size: contain;
+					background-position: left;
+					margin-left: auto;
+					margin-right: auto;
+			}
+
+			.deel02>.foto{
+					width: 30vw;
+					background-size: contain;
+					margin-left: auto;
+					margin-right: auto;
+			}
+
+
+			.deel03>.foto{
+					height: 50vh;
+					width: 30vw;
+					background-size: contain;
+					background-position: right bottom;
+					margin-left: auto;
+					margin-right: auto;
+			}
+
+			video{
+					width: 50vw;
+					margin-top: 10rem;
+					display: block;
+					margin: 10rem auto;
+			}
+
+			.deelvideo{
+					grid-row: 3;
+					grid-column: 1/4;
+				}
+
+ 		@keyframes vanboven {
+ 				 from{
+ 					margin: 0vh auto;
+ 					}
+ 		}
+
+ 				h1>span{
+ 							color: lightgrey;
+ 							mix-blend-mode: color-dodge;
+ 							font-size: 23rem;
+ 							text-align: center;
+ 							animation-name: vanbeneden;
+ 							animation-duration: 2s;
+ 				}
+ 				@keyframes vanbeneden {
+ 						 from{
+ 							margin: 90vh auto;
+ 							}
+ 				}
+
+				body {
+				   /*   height: 300vh; */
+				}
+				.next{
+					top: 270vh;
+				}
+				.lijn_01, .lijn_02{
+					display: none;
+				}
+
+				h3{
+						text-align: right;
+						margin: 3rem auto;
+				}
+
+				.lijn_03, .lijn_04, .lijn_05, .lijn_06, .lijn_07, .lijn_08 {
+						display: block;
+						position: absolute;
+						background-color: black;
+				}
+
+				.lijn_03, .lijn_06, .lijn_07, .lijn_08{
+					 width: 0.5rem;
+					 animation-name: verlengen;
+					animation-duration: 2s;
+				}
+
+				.lijn_03{
+					 top: 70vh;
+					 left: 50vw;
+					 height: 10vh;
+
+				}
+
+				.lijn_06, .lijn_07, .lijn_08{
+					top: 80vh;
+					height: 14vh;
+
+				}
+				.lijn_06{
+				left: 15vw;
+				}
+				.lijn_07{
+				left: 50vw;
+				}
+				.lijn_08{
+				left: 85vw;
+				}
+					@keyframes verlengen {
+						from{
+							height: 0;
+					 	}
+					}
+
+				.lijn_04, .lijn_05{
+					height: 0.5rem;
+					width: 35vw;
+					left: 50vw;
+					top: 80vh;
+					animation-duration: 3s;
+
+				}
+
+				.lijn_05{
+					animation-name: verbredenrechts;
+				}
+
+				@keyframes verbredenrechts {
+					from{
+						width: 0;
+				 	}
+					10%{
+						opacity: 1;
+					}
+				}
+				.lijn_04{
+					animation-name: verbredenlinks;
+					left: 15vw;
+				}
+			@keyframes verbredenlinks {
+				from{
+					width: 0;
+					left: 50vw;
+			 	}
+			}
+			.onzichtbaar{
+			display: none;
+}
+		@media (min-width: 1200px) {
+			.deel01>p, .deel02>p, .deel03>p{
+ 				font-size: 1.3vw;
+ 			}
+
+		}
+}
+}
